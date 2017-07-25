@@ -1,6 +1,5 @@
 """
-This is the base file of the friendly-computing-machine!
+This is the base file of the friendly_computing_machine!
 """
 
-from . import math
 from .math import add, sub, mult, quot
