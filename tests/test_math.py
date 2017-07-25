@@ -40,5 +40,17 @@ test_sub_data = [
 ]
 
 @pytest.mark.parametrize("a, b, expected", test_sub_data)
-def test_add(a, b, expected):
+def test_sub(a, b, expected):
     assert fcm.sub(a, b) == expected
+
+# test quot
+test_quot_data = [
+    (2., 5., 0.4),
+    (1., 3., 1./3.),
+    (6., 9., 2./3.),
+    (0, 1., 0.)
+]
+
+@pytest.mark.parametrize("a, b, expected", test_quot_data)
+def test_quot(a, b, expected):
+    assert fcm.quot(a, b) == expected
