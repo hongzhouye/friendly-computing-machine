@@ -30,3 +30,15 @@ test_add_data = [
 def test_add(a, b, expected):
     assert fcm.add(a, b) == expected
     assert fcm.add(b, a) == expected
+
+# test sub
+test_sub_data = [
+    (2, 5, -3),
+    (1, 3, -2),
+    (6, 9, -3),
+    (0, 1, -1)
+]
+
+@pytest.mark.parametrize("a, b, expected", test_sub_data)
+def test_add(a, b, expected):
+    assert fcm.sub(a, b) == expected
