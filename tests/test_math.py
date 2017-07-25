@@ -5,13 +5,20 @@ Tests for module math.py of fcm
 import friendly_computing_machine as fcm
 import pytest
 
+# test mult
+test_mult_data = [
+    (2, 5, 10),
+    (1, 3, 3),
+    (6, 9, 54),
+    (0, 1, 0)
+]
+
+@pytest.mark.parametrize("a, b, expected", test_mult_data)
 def test_mult():
-    assert fcm.mult(2, 5) == 10
-    assert fcm.mult(5, 2) == 10
+    assert fcm.mult(a, b) == expected
+    assert fcm.mult(b, a) == expected
 
-    assert fcm.mult(2, 3) == 6
-    assert fcm.mult(3, 2) == 6
-
+# test add
 test_add_data = [
     (2, 5, 7),
     (1, 3, 4),
