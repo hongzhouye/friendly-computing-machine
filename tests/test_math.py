@@ -14,7 +14,7 @@ test_mult_data = [
 ]
 
 @pytest.mark.parametrize("a, b, expected", test_mult_data)
-def test_mult():
+def test_mult(a, b, expected):
     assert fcm.mult(a, b) == expected
     assert fcm.mult(b, a) == expected
 
@@ -28,5 +28,5 @@ test_add_data = [
 
 @pytest.mark.parametrize("a, b, expected", test_add_data)
 def test_add(a, b, expected):
-    assert fcm.add (a, b) == expected
-    assert fcm.add (b, a) == expected
+    assert fcm.add(a, b) == expected
+    assert fcm.add(b, a) == expected
